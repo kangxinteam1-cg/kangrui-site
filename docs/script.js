@@ -9,7 +9,7 @@ window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
 // Scroll reveal
-const revealTargets = document.querySelectorAll('.section-title, .about__text, .service, .post, .contact__item, .wechat__card, .hero__stats, .news-card, .insight-card, .news-featured__inner, .editors-pick__head, .series__head, .channel-card, .channels__head, .visit__inner, .inquiry__intro, .inquiry__form');
+const revealTargets = document.querySelectorAll('.section-title, .about__text, .service, .post, .contact__item, .wechat__card, .hero__stats, .news-card, .insight-card, .news-featured__inner, .editors-pick__head, .series__head, .channel-card, .channels__head, .visit__inner, .inquiry__intro, .inquiry__form, .lawyer-card, .team-stats__inner, .join-us__inner');
 revealTargets.forEach(el => el.classList.add('reveal'));
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -64,15 +64,21 @@ statNums.forEach(el => statIO.observe(el));
 // News & Insights · filter / search
 // ============================================================
 (function () {
-  const grid = document.getElementById('news-grid') || document.getElementById('insight-grid');
+  const grid = document.getElementById('news-grid')
+            || document.getElementById('insight-grid')
+            || document.getElementById('team-list');
   if (!grid) return;
 
-  const cards = Array.from(grid.children).filter(el => el.matches('.news-card, .insight-card'));
+  const cards = Array.from(grid.querySelectorAll('.news-card, .insight-card, .lawyer-card'));
   const yearSelect = document.getElementById('year-select');
-  const searchInput = document.getElementById('news-search') || document.getElementById('insight-search');
-  const emptyEl = document.getElementById('news-empty') || document.getElementById('insight-empty');
+  const searchInput = document.getElementById('news-search')
+                   || document.getElementById('insight-search')
+                   || document.getElementById('team-search');
+  const emptyEl = document.getElementById('news-empty')
+              || document.getElementById('insight-empty')
+              || document.getElementById('team-empty');
 
-  const state = { kind: 'all', area: 'all', year: 'all', q: '' };
+  const state = { kind: 'all', area: 'all', year: 'all', role: 'all', q: '' };
 
   // Stagger the initial reveal animation a bit on cards
   cards.forEach((el, i) => { el.style.transitionDelay = (i % 6) * 0.06 + 's'; });
@@ -105,8 +111,9 @@ statNums.forEach(el => statIO.observe(el));
 
   function matches(card) {
     if (state.kind !== 'all' && card.dataset.kind !== state.kind) return false;
-    if (state.area !== 'all' && card.dataset.area !== state.area) return false;
+    if (state.area !== 'all' && card.dataset.area && !card.dataset.area.split(/\s+/).includes(state.area)) return false;
     if (state.year !== 'all' && card.dataset.year !== state.year) return false;
+    if (state.role !== 'all' && card.dataset.role !== state.role) return false;
     if (state.q) {
       const text = card.textContent.toLowerCase();
       if (!text.includes(state.q)) return false;
