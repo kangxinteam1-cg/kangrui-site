@@ -1,3 +1,71 @@
+// ============================================================
+// i18n · zh / en toggle
+// ============================================================
+(function () {
+  const STORAGE_KEY = 'kangrui-lang';
+  const ATTR_PREFIX = 'data-en-attr-';
+
+  function camel(s) { return s.replace(/-([a-z])/g, (_, c) => c.toUpperCase()); }
+
+  function snapshotZh() {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      if (!el.hasAttribute('data-zh')) el.setAttribute('data-zh', el.innerHTML);
+    });
+    document.querySelectorAll('*').forEach(el => {
+      Array.from(el.attributes)
+        .filter(a => a.name.startsWith(ATTR_PREFIX))
+        .forEach(a => {
+          const target = a.name.slice(ATTR_PREFIX.length);
+          const stash = 'data-zh-attr-' + target;
+          if (!el.hasAttribute(stash)) {
+            el.setAttribute(stash, el.getAttribute(target) || '');
+          }
+        });
+    });
+  }
+
+  function applyLang(lang) {
+    const isEn = lang === 'en';
+    document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+    document.documentElement.setAttribute('data-lang', isEn ? 'en' : 'zh');
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const en = el.getAttribute('data-en');
+      const zh = el.getAttribute('data-zh');
+      el.innerHTML = isEn ? en : zh;
+    });
+
+    document.querySelectorAll('*').forEach(el => {
+      Array.from(el.attributes)
+        .filter(a => a.name.startsWith(ATTR_PREFIX))
+        .forEach(a => {
+          const target = a.name.slice(ATTR_PREFIX.length);
+          const zhAttr = el.getAttribute('data-zh-attr-' + target) || '';
+          el.setAttribute(target, isEn ? a.value : zhAttr);
+        });
+    });
+
+    document.querySelectorAll('.nav__lang').forEach(btn => {
+      btn.textContent = isEn ? 'EN / 中' : '中 / EN';
+      btn.setAttribute('aria-label', isEn ? 'Switch to Chinese' : 'Switch to English');
+    });
+
+    try { localStorage.setItem(STORAGE_KEY, isEn ? 'en' : 'zh'); } catch (e) {}
+  }
+
+  snapshotZh();
+  let saved = 'zh';
+  try { saved = localStorage.getItem(STORAGE_KEY) || 'zh'; } catch (e) {}
+  applyLang(saved);
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.nav__lang');
+    if (!btn) return;
+    const cur = document.documentElement.getAttribute('data-lang') || 'zh';
+    applyLang(cur === 'en' ? 'zh' : 'en');
+  });
+})();
+
 // Nav background on scroll
 const nav = document.getElementById('nav');
 const onScroll = () => {
