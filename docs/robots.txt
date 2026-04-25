@@ -1,0 +1,28 @@
+# 北京康瑞律师事务所 · robots.txt
+User-agent: *
+Allow: /
+Disallow: /assets/images/_*
+
+# 主流 AI 抓取器（GEO 友好，可按需关闭）
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://www.kangruilaw.com/sitemap.xml
