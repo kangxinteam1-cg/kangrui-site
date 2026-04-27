@@ -61,6 +61,12 @@ top-down editorial flat lay of an opened antique legal book with handwritten mar
 abstract macro photograph of intertwined copper and brass wires forming an elegant knot, set against a deep teal-to-navy gradient background, single warm rim light catching the metal edges, premium studio lighting, symbolic of intellectual property and connection, editorial product photography, shallow depth of field, no text, no watermark --ar 4:3 --style raw --v 6.1 --quality 2
 ```
 
+## 8. `team-hero.png` · 律师团队页 hero（16:9）
+
+```
+wide cinematic photograph of an empty modern law firm boardroom at dusk, long polished dark walnut conference table with a row of dark tufted leather chairs evenly arranged, deep navy blue marble walls with subtle brass inlay trim, faint blue twilight light through tall arched windows in the back, single brass pendant lamp glowing warm amber over the table center, stacks of legal volumes and a closed notebook on the table, minimalist editorial mood, grand symmetric composition, premium magazine cover style, cinematic side lighting, shallow depth of field, no people, no text, no logos --ar 16:9 --style raw --v 6.1 --quality 2
+```
+
 ---
 
 ## Midjourney 操作流程（每条 prompt）
