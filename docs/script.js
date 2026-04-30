@@ -76,6 +76,17 @@ const onScroll = () => {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
+// Hero video fade-in (only after first frame can play)
+(function () {
+  const v = document.querySelector('.hero__video');
+  if (!v) return;
+  const reveal = () => v.classList.add('is-ready');
+  if (v.readyState >= 3) reveal();
+  else v.addEventListener('canplay', reveal, { once: true });
+  // safety fallback: reveal after 1.5s even if canplay didn't fire
+  setTimeout(reveal, 1500);
+})();
+
 // Scroll reveal
 const revealTargets = document.querySelectorAll('.section-title, .about__text, .service, .post, .contact__item, .wechat__card, .hero__stats, .news-card, .insight-card, .news-featured__inner, .editors-pick__head, .series__head, .channel-card, .channels__head, .visit__inner, .inquiry__intro, .inquiry__form, .lawyer-card, .team-stats__inner, .join-us__inner');
 revealTargets.forEach(el => el.classList.add('reveal'));
@@ -145,11 +156,30 @@ statNums.forEach(el => statIO.observe(el));
   const emptyEl = document.getElementById('news-empty')
               || document.getElementById('insight-empty')
               || document.getElementById('team-empty');
+  const countEl = document.getElementById('team-result-count');
+  const sortSelect = document.getElementById('team-sort');
 
   const state = { kind: 'all', area: 'all', year: 'all', role: 'all', q: '' };
 
   // Stagger the initial reveal animation a bit on cards
   cards.forEach((el, i) => { el.style.transitionDelay = (i % 6) * 0.06 + 's'; });
+
+  // Team sort (A-Z / Z-A by pinyin)
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => { sortTeam(sortSelect.value); });
+  }
+  function sortTeam(by) {
+    if (by === 'default') return; // leave DOM order
+    document.querySelectorAll('.team-grid').forEach(g => {
+      const items = Array.from(g.children).filter(el => el.matches('.lawyer-card'));
+      const pinyin = el => ((el.dataset.name || '').split(/\s+/).pop() || '').toLowerCase();
+      items.sort((a, b) => {
+        const cmp = pinyin(a).localeCompare(pinyin(b));
+        return by === 'name-desc' ? -cmp : cmp;
+      });
+      items.forEach(i => g.appendChild(i));
+    });
+  }
 
   // Chip groups (single-select per group)
   document.querySelectorAll('.filter-bar__group').forEach(group => {
@@ -197,6 +227,17 @@ statNums.forEach(el => statIO.observe(el));
       if (ok) visible++;
     });
     if (emptyEl) emptyEl.classList.toggle('is-visible', visible === 0);
+    if (countEl) countEl.textContent = visible;
+
+    // Hide group titles whose grid has no visible cards left
+    document.querySelectorAll('.team__group-title').forEach(title => {
+      let next = title.nextElementSibling;
+      while (next && !next.classList.contains('team-grid')) next = next.nextElementSibling;
+      if (!next) return;
+      const anyVisible = Array.from(next.querySelectorAll('.lawyer-card'))
+        .some(c => c.style.display !== 'none');
+      title.style.display = anyVisible ? '' : 'none';
+    });
     /* TODO: replace with WP REST API
        fetch('/wp-json/wp/v2/posts?categories=18&search=' + encodeURIComponent(state.q) + ...)
        .then(r => r.json()).then(render);

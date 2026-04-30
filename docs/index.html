@@ -92,7 +92,7 @@
       "@type": "FAQPage",
       "@id": "https://www.kangruilaw.com/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "康瑞律师事务所主要提供哪些法律服务？", "acceptedAnswer": { "@type": "Answer", "text": "康瑞专注于知识产权法律服务，业务覆盖专利、商标、著作权、商业秘密、反不正当竞争四大类，分为四条主线：确权与保护、商业运营、侵权应对与争议解决、企业法律顾问。可承接从权利申请到跨境维权、从尽职调查到合规培训的全生命周期工作。" } },
+        { "@type": "Question", "name": "康瑞律师事务所主要提供哪些法律服务？", "acceptedAnswer": { "@type": "Answer", "text": "康瑞专注于知识产权法律服务，业务覆盖专利、商标、版权、商业秘密四大权利类型，划分为六大核心板块：确权争议、诉讼维权、调查取证、风控布局、许可交易、战略咨询。可承接从商标无效宣告、专利无效，到侵权诉讼、调查取证、海关保护，再到许可交易、战略顾问的完整知识产权法律工作。" } },
         { "@type": "Question", "name": "康瑞处理哪些类型的知识产权诉讼？", "acceptedAnswer": { "@type": "Answer", "text": "包括发明专利侵权诉讼、实用新型与外观设计诉讼、商标侵权与不正当竞争、著作权侵权、商业秘密侵权、反垄断与反不正当竞争等，覆盖一审、二审、再审及最高人民法院知识产权法庭。同时承办行政程序（专利无效、商标异议/无效），以及跨境与海关查扣案件。" } },
         { "@type": "Question", "name": "康瑞是否能为外国企业在中国提供法律服务？", "acceptedAnswer": { "@type": "Answer", "text": "可以。康瑞具有丰富的涉外知识产权服务经验，团队成员可使用中英文工作，长期服务来自欧美、日韩及东南亚的企业客户。具体服务包括在华专利/商标布局、维权策略、行政与司法程序代理、合同审查与本地合规咨询。" } },
         { "@type": "Question", "name": "初次咨询是否收费？合作流程是怎样的？", "acceptedAnswer": { "@type": "Answer", "text": "初次沟通通常以免费 30–60 分钟简评方式进行，由合伙人或资深律师评估争议或项目可行性。进入正式委托前，我们会出具书面工作方案与报价。报价方式包括小时费率、固定费用、阶段性费用或混合模式，依据案件复杂度协商确定。" } },
@@ -128,15 +128,18 @@
 <!-- ========== HERO ========== -->
 <section class="hero" id="top">
   <div class="hero__bg" style="background-image:url('assets/images/hero.png');"></div>
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero.png" aria-hidden="true">
+    <source src="assets/videos/hero-loop.mp4" type="video/mp4" />
+  </video>
   <div class="hero__overlay"></div>
   <div class="hero__content">
     <div class="hero__eyebrow">
       <span class="line"></span>
-      <span data-en="Beijing Kangrui Law Firm · Established 1999">北京康瑞律师事务所 · 始于 1999</span>
+      <span data-en="Beijing Kangrui Law Firm · Established 2010">北京康瑞律师事务所 · 始于 2010</span>
     </div>
-    <h1 class="hero__title" data-en="Where invention finds its <span class=&quot;accent&quot;>value</span>,<br/>and order, its <span class=&quot;accent&quot;>foundation</span>.">
-      让创造<span class="accent">有价</span>，<br/>
-      让秩序<span class="accent">有据</span>。
+    <h1 class="hero__title" data-en="Forging a <span class=&quot;accent&quot;>solid shield</span> for intellectual property,<br/>pioneering <span class=&quot;accent&quot;>strategic</span> competitive advantage.">
+      铸就知识产权<span class="accent">坚实护盾</span>，<br/>
+      开创<span class="accent">战略竞争</span>优势
     </h1>
     <p class="hero__sub" data-en="Forward-looking, considered, and systematic counsel for those who create.">
       为每一个创造者，提供前瞻、审慎、系统的法律服务。
@@ -149,11 +152,34 @@
       <a href="#contact" class="btn btn--ghost" data-en="Get in touch">联系我们</a>
     </div>
 
-    <div class="hero__stats">
-      <div class="stat"><div class="stat__num" data-suffix="+">1500</div><div class="stat__label" data-en="Litigation matters handled">累计诉讼案件</div></div>
-      <div class="stat"><div class="stat__num" data-suffix="%+">65</div><div class="stat__label" data-en="Overall success rate (incl. settlements)">综合胜诉率（含调解）</div></div>
-      <div class="stat"><div class="stat__num" data-suffix="%">92</div><div class="stat__label" data-en="Civil litigation success rate">民事诉讼胜诉率</div></div>
-      <div class="stat"><div class="stat__num" data-suffix="+">26</div><div class="stat__label" data-en="Years of specialist practice">年专业沉淀</div></div>
+    <div class="hero__practices">
+      <span class="hero__practices-eyebrow" data-en="Our practice">业务索引</span>
+      <div class="hero__practices-grid">
+        <a href="services.html#area-01" class="hero__practice">
+          <span class="hero__practice-num">01</span>
+          <span class="hero__practice-name" data-en="Rights Establishment">确权争议</span>
+        </a>
+        <a href="services.html#area-02" class="hero__practice">
+          <span class="hero__practice-num">02</span>
+          <span class="hero__practice-name" data-en="Litigation & Enforcement">诉讼维权</span>
+        </a>
+        <a href="services.html#area-03" class="hero__practice">
+          <span class="hero__practice-num">03</span>
+          <span class="hero__practice-name" data-en="Investigation & Evidence">调查取证</span>
+        </a>
+        <a href="services.html#area-04" class="hero__practice">
+          <span class="hero__practice-num">04</span>
+          <span class="hero__practice-name" data-en="Risk Defense">风控布局</span>
+        </a>
+        <a href="services.html#area-05" class="hero__practice">
+          <span class="hero__practice-num">05</span>
+          <span class="hero__practice-name" data-en="Licensing & Transactions">许可交易</span>
+        </a>
+        <a href="services.html#area-06" class="hero__practice">
+          <span class="hero__practice-num">06</span>
+          <span class="hero__practice-name" data-en="Strategic Counsel">战略咨询</span>
+        </a>
+      </div>
     </div>
   </div>
   <a href="#about" class="hero__scroll" aria-label="向下滚动" data-en-attr-aria-label="Scroll down">
@@ -193,49 +219,69 @@
         <span class="line"></span>
         <span data-en="02 &nbsp;/&nbsp; Practice Areas">02 &nbsp;/&nbsp; 服务领域</span>
       </div>
-      <h2 class="section-title light" data-en="Four core practices,<br/>covering the <em>full lifecycle</em> of intellectual property.">
-        四大核心业务领域，<br/>
-        覆盖知识产权<em>全生命周期</em>。
+      <h2 class="section-title light" data-en="Six core practices,<br/>built around <em>establishing rights</em>.">
+        六大核心业务，<br/>
+        以<em>确权</em>为脊梁。
       </h2>
     </div>
   </div>
   <div class="services__grid">
       <a class="service" href="services.html#area-01" data-num="01">
-        <div class="service__img" style="background-image:url('assets/images/service-1.png');"></div>
+        <div class="service__img" style="background-image:url('assets/images/home-01-crystal.png');"></div>
         <div class="service__body">
           <div class="service__num">01</div>
-          <h3 class="service__title" data-en="Rights & Protection">确权与保护</h3>
-          <p class="service__desc" data-en="Patent prosecution and portfolio strategy, trademark registration, copyright filings, integrated-circuit layout-design protection, and trade-secret safeguards — establishing a robust foundation of rights.">专利申请与布局、商标注册、著作权登记、集成电路布图设计、商业秘密保护等权利确立与防御体系构建。</p>
+          <h3 class="service__title" data-en="Rights Establishment">确权争议</h3>
+          <p class="service__desc" data-en="Trademark opposition, invalidation, refusal review and non-use cancellation; patent invalidation; copyright registration disputes; administrative litigation — securing the foundation that all downstream protection depends on.">商标异议 / 无效 / 驳回复审 / 撤三，专利无效，版权登记争议，行政诉讼——守住每一项权利最关键的边界。</p>
           <span class="service__more" data-en="Learn more →">了解更多 →</span>
         </div>
       </a>
 
       <a class="service" href="services.html#area-02" data-num="02">
-        <div class="service__img" style="background-image:url('assets/images/service-2.png');"></div>
+        <div class="service__img" style="background-image:url('assets/images/sub-03-patent-litigation.png');"></div>
         <div class="service__body">
           <div class="service__num">02</div>
-          <h3 class="service__title" data-en="Commercialization">商业运营</h3>
-          <p class="service__desc" data-en="Licensing, assignments, and IP-backed financing; technology collaborations and commercialization; IP due diligence — turning intangible assets into tangible commercial value.">知识产权许可、转让与质押，技术合作与商业化，知识产权尽职调查，助力无形资产实现商业价值最大化。</p>
+          <h3 class="service__title" data-en="Litigation & Enforcement">诉讼维权</h3>
+          <p class="service__desc" data-en="Patent, trademark, copyright, and trade-secret infringement litigation; anti-unfair competition; domain and company-name disputes — represented before the SPC, the Beijing IP Court, and specialized tribunals nationwide.">专利、商标、版权、商业秘密侵权诉讼，反不正当竞争，域名与企业名称争议——在最高法及各地专门法院的标志性代理。</p>
           <span class="service__more" data-en="Learn more →">了解更多 →</span>
         </div>
       </a>
 
       <a class="service" href="services.html#area-03" data-num="03">
-        <div class="service__img" style="background-image:url('assets/images/service-3.png');"></div>
+        <div class="service__img" style="background-image:url('assets/images/sub-02-diligence.png');"></div>
         <div class="service__body">
           <div class="service__num">03</div>
-          <h3 class="service__title" data-en="Enforcement & Disputes">侵权应对与争议解决</h3>
-          <p class="service__desc" data-en="Patent, trademark, copyright, and unfair-competition litigation; administrative actions; customs enforcement; e-commerce and online-platform takedowns; arbitration; and cross-border dispute coordination.">专利、商标、著作权及不正当竞争诉讼，行政查处，海关保护，互联网及电商平台维权，仲裁与跨境争议协调。</p>
+          <h3 class="service__title" data-en="Investigation & Evidence">调查取证</h3>
+          <p class="service__desc" data-en="Background investigation, infringement investigation, online surveillance, notarized purchases, and evidence preservation — converting scattered signals into a court-ready evidentiary chain.">企业背景、侵权追溯、网络监控、公证购买、证据收集与固定——把模糊事实变成可采信的证据。</p>
           <span class="service__more" data-en="Learn more →">了解更多 →</span>
         </div>
       </a>
 
       <a class="service" href="services.html#area-04" data-num="04">
-        <div class="service__img" style="background-image:url('assets/images/service-4.png');"></div>
+        <div class="service__img" style="background-image:url('assets/images/sub-03-enforcement.png');"></div>
         <div class="service__body">
           <div class="service__num">04</div>
-          <h3 class="service__title" data-en="General Counsel">法律顾问</h3>
-          <p class="service__desc" data-en="Long-term IP advisory for in-house teams — building compliance frameworks, early-warning systems, and strategic roadmaps that turn intellectual property into a true engine of growth.">为企业提供常年知识产权法律顾问服务，协助建立合规体系、风险预警与战略规划，使知识产权成为企业增长引擎。</p>
+          <h3 class="service__title" data-en="Risk Defense & Strategic Layout">风控布局</h3>
+          <p class="service__desc" data-en="Administrative complaints, customs protection, exhibition monitoring, criminal-action coordination, and compliance audits — shifting the locus of protection from after-the-fact litigation to before-the-fact deterrence.">行政查处、海关保护、展会保护、刑事打击、合规审查——把"事后救济"前置为"事前布防"。</p>
+          <span class="service__more" data-en="Learn more →">了解更多 →</span>
+        </div>
+      </a>
+
+      <a class="service" href="services.html#area-05" data-num="05">
+        <div class="service__img" style="background-image:url('assets/images/home-05-orbs.png');"></div>
+        <div class="service__body">
+          <div class="service__num">05</div>
+          <h3 class="service__title" data-en="Licensing & Transactions">许可交易</h3>
+          <p class="service__desc" data-en="Negotiation, assignments, licensing, recordation and filings, contract review, and IP due diligence — turning intangible assets into tradable, financeable, scalable competitive advantage.">谈判、转让、许可、登记备案、合同审核、知识产权尽职调查——把权利转化为可交易、可融资的商业价值。</p>
+          <span class="service__more" data-en="Learn more →">了解更多 →</span>
+        </div>
+      </a>
+
+      <a class="service" href="services.html#area-06" data-num="06">
+        <div class="service__img" style="background-image:url('assets/images/home-06-radial.png');"></div>
+        <div class="service__body">
+          <div class="service__num">06</div>
+          <h3 class="service__title" data-en="Strategic Counsel">战略咨询</h3>
+          <p class="service__desc" data-en="Legal advisory, search and analysis, IP strategy, cross-border disputes, corporate and employment-law guidance, and standing counsel — higher-altitude judgment before every key decision.">法律咨询、检索分析、IP 战略、涉外纠纷、公司与劳动法、常年顾问——在重大决策前提供更高一层的视角。</p>
           <span class="service__more" data-en="Learn more →">了解更多 →</span>
         </div>
       </a>
@@ -382,49 +428,48 @@
         <span data-en="FAQ &nbsp;/&nbsp; Frequently Asked">常见问题 &nbsp;/&nbsp; FAQ</span>
       </div>
       <h2 class="section-title" id="faq-title" data-en="About Kangrui and our <em>IP practice</em>">关于康瑞与<em>知识产权法律服务</em></h2>
-      <p class="faq__lede" data-en="The six questions below come up most often in initial consultations and media interviews. If yours isn't covered, please <a href=&quot;contact.html&quot;>get in touch</a>.">以下问题汇集自客户初次咨询与媒体访谈中最常被问及的 6 个方向。如未涵盖您的疑问，欢迎前往 <a href="contact.html">联系我们</a>。</p>
     </div>
 
     <div class="faq__list">
       <details class="faq-item" open>
         <summary data-en="What services does Kangrui provide?">康瑞律师事务所主要提供哪些法律服务？</summary>
-        <div class="faq-item__body" data-en="<p>Kangrui is a dedicated intellectual property practice. Our work spans <strong>patents, trademarks, copyright, trade secrets, and anti-unfair competition</strong>, organized around four practice lines: rights protection, commercialization, enforcement and disputes, and general counsel. We handle the full lifecycle — from filing to cross-border enforcement, from due diligence to compliance training.</p>">
-          <p>康瑞专注于知识产权法律服务，业务覆盖<strong>专利、商标、著作权、商业秘密、反不正当竞争</strong>四大类，分为四条主线：确权与保护、商业运营、侵权应对与争议解决、企业法律顾问。可承接从权利申请到跨境维权、从尽职调查到合规培训的全生命周期工作。</p>
+        <div class="faq-item__body" data-en="<p>Kangrui focuses on intellectual property and related legal services, with practice covering <strong>patents, trademarks, copyright, computer software copyright, domain names, trade secrets, and anti-unfair competition</strong>. We provide IP filing and portfolio strategy, rights-stability analysis, licensing and assignment, contract review, infringement investigation, administrative protection, civil litigation, customs protection, and corporate IP compliance — building comprehensive solutions tailored to each client's industry and commercial objectives.</p>">
+          <p>康瑞律师事务所专注于知识产权及相关法律服务，服务范围涵盖<strong>专利、商标、著作权、计算机软件著作权、域名、商业秘密、反不正当竞争</strong>等领域。康瑞可为客户提供知识产权申请与布局、权利稳定性分析、许可与转让、合同审查、侵权调查、行政保护、民事诉讼、海关保护及企业知识产权合规等服务，并根据客户的行业特点和商业目标制定综合解决方案。</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary data-en="What types of IP litigation does Kangrui handle?">康瑞处理哪些类型的知识产权诉讼？</summary>
-        <div class="faq-item__body" data-en="<p>Invention-patent infringement, utility-model and design-patent disputes, trademark infringement and unfair competition, copyright infringement, trade-secret misappropriation, and antitrust matters — at first instance, appeal, retrial, and before the <strong>Supreme People's Court IP Tribunal</strong>. We also handle administrative procedures (patent invalidation, trademark opposition and invalidation) as well as cross-border and customs-detention cases.</p>">
-          <p>包括<strong>发明专利侵权诉讼、实用新型与外观设计诉讼、商标侵权与不正当竞争、著作权侵权、商业秘密侵权、反垄断与反不正当竞争</strong>等，覆盖一审、二审、再审及最高人民法院知识产权法庭。同时承办行政程序（专利无效、商标异议/无效），以及跨境与海关查扣案件。</p>
+        <div class="faq-item__body" data-en="<p>Disputes Kangrui handles span <strong>patents, trademarks, copyright, computer software copyright, trade secrets, anti-unfair competition, technology contracts and technology transfer</strong>. Our work covers infringement litigation, administrative rights-establishment and administrative litigation, invalidation, opposition and dispute procedures, customs protection, anti-counterfeiting, as well as cross-border IP matters and US Section 337 investigations. The specific case type and scope of representation depend on the facts, jurisdictional rules, and client needs.</p>">
+          <p>康瑞办理的知识产权争议包括<strong>专利、商标、著作权、计算机软件著作权、商业秘密、反不正当竞争、技术合同及技术转让</strong>相关纠纷等。服务范围涵盖侵权诉讼、行政确权及行政诉讼、无效宣告、异议及争议程序、海关保护、打假维权，以及涉及境外知识产权争议、美国 337 调查等事项。具体案件类型及代理范围需结合个案事实、管辖规则和客户需求进一步评估。</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary data-en="Can Kangrui represent foreign companies in China?">康瑞是否能为外国企业在中国提供法律服务？</summary>
-        <div class="faq-item__body" data-en="<p>Yes. We have substantial <strong>experience advising international clients</strong>, work fluently in both Chinese and English, and have long served companies from Europe, North America, Japan, Korea, and Southeast Asia. Our work for international clients covers China-side patent and trademark strategy, enforcement planning, administrative and judicial representation, contract review, and local compliance counsel.</p>">
-          <p>可以。康瑞具有丰富的<strong>涉外知识产权服务经验</strong>，团队成员可使用中英文工作，长期服务来自欧美、日韩及东南亚的企业客户。具体服务包括在华专利/商标布局、维权策略、行政与司法程序代理、合同审查与本地合规咨询。</p>
+        <div class="faq-item__body" data-en="<p>Yes. Kangrui has long served both Chinese and international clients on IP matters, assisting foreign companies with <strong>patents, trademarks, copyright, trade secrets, and anti-unfair competition</strong> in China — including portfolio strategy, licensing and assignment, contract review, local compliance counsel, administrative procedures, litigation, and dispute resolution. For cross-border projects, we provide legal advice and execution plans aligned with China's legal environment, sector regulation, and the client's global IP strategy.</p>">
+          <p>可以。康瑞长期为中外客户提供知识产权相关法律服务，可协助外国企业处理在中国的<strong>专利、商标、著作权、商业秘密和反不正当竞争</strong>等事项，包括权利布局、许可与转让、合同审查、本地合规咨询、行政程序、诉讼及争议解决等。对于跨境项目，康瑞可结合中国法律环境、行业监管要求和客户全球知识产权策略，提供相应的法律意见和执行方案。</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary data-en="Is the initial consultation paid? What does engagement look like?">初次咨询是否收费？合作流程是怎样的？</summary>
-        <div class="faq-item__body" data-en="<p>Initial discussions are typically a <strong>complimentary 30–60-minute review</strong>, conducted by a partner or senior associate to assess the dispute or matter. Before any formal engagement we provide a written scope and fee proposal. Fee structures include hourly rates, fixed fees, milestone fees, or hybrid arrangements, calibrated to the complexity of the work.</p>">
-          <p>初次沟通通常以<strong>免费 30–60 分钟简评</strong>方式进行，由合伙人或资深律师评估争议或项目可行性。进入正式委托前，我们会出具书面工作方案与报价。报价方式包括小时费率、固定费用、阶段性费用或混合模式，依据案件复杂度协商确定。</p>
+        <div class="faq-item__body" data-en="<p>An initial discussion can be arranged at the client's request to review the background, key issues, objectives, and potential legal pathways. Whether the consultation is paid, the format, and the duration are confirmed when scheduling. Before any formal engagement, Kangrui typically proposes a <strong>scope of work, service plan, and fee arrangement</strong> based on the matter; fee structures are agreed in light of complexity, workload, timing, and client needs, and are governed by the executed engagement letter.</p>">
+          <p>初次沟通可根据客户需求安排，用于初步了解事项背景、争议焦点、目标诉求及可能的法律路径。是否收费、沟通形式及具体时长，可在预约时确认。进入正式委托前，康瑞通常会根据案件或项目情况提出<strong>工作范围、服务方案及费用安排</strong>；费用方式可结合事项复杂程度、工作量、时间要求及客户需求协商确定，并以双方签署的委托文件为准。</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary data-en="How does Kangrui differ from agencies and full-service firms?">康瑞与代理机构、综合性大所相比有什么差异？</summary>
-        <div class="faq-item__body" data-en="<p>Kangrui is a <strong>specialist boutique</strong>. Compared with patent and trademark agencies, we offer full courtroom and litigation capability. Compared with full-service firms, our focus runs the entire IP value chain, with a deeper grasp of technical and commercial context — and proposals that sit closer to how businesses actually operate.</p>">
-          <p>康瑞的定位是<strong>专业精品所</strong>：相比代理机构，我们拥有出庭与诉讼能力；相比综合性大所，我们的专长聚焦于知识产权全链条，团队对技术与商业语境的理解更深入，方案更贴近企业实际诉求。</p>
+        <div class="faq-item__body" data-en="<p>Kangrui is a <strong>specialist firm built around intellectual property</strong>. Compared with agencies focused solely on rights filings, Kangrui delivers integrated legal services across rights-establishment, transactions, protection, dispute resolution, and litigation. Compared with full-service firms, Kangrui is more focused on IP — our team has long handled legal questions tied to technology, brands, and innovation outcomes, and tailors solutions to the client's rights foundation, commercial context, and dispute risk.</p>">
+          <p>康瑞是一家<strong>以知识产权为核心业务领域的专业化律师事务所</strong>。与单纯办理权利申请的代理服务相比，康瑞能够在确权、交易、保护、争议解决及诉讼等环节提供法律服务衔接；与综合性律所相比，康瑞更加聚焦知识产权业务，团队长期处理技术、品牌和创新成果相关法律问题，能够结合权利基础、商业场景和争议风险，为客户提供更具针对性的解决方案。</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary data-en="Where is the office? Can we meet?">办公地点在哪？是否能上门洽谈？</summary>
-        <div class="faq-item__body" data-en="<p>Our office is at <strong>Tower A, Yindu Building, Zhichun Road, Haidian District, Beijing</strong>, near Zhichunlu and Dazhongsi metro stations. Clients are welcome by appointment, and partners are available for on-site meetings or video conference. Full address and contact details on our <a href=&quot;contact.html&quot;>contact page</a>.</p>">
-          <p>办公室位于<strong>北京市海淀区知春路盈都大厦 A 座</strong>，毗邻地铁知春路站、大钟寺站。客户可预约到所洽谈，或安排合伙人前往贵公司及视频会议。详细地址与联系方式见 <a href="contact.html">联系我们</a> 页面。</p>
+        <div class="faq-item__body" data-en="<p>Kangrui is located in the <strong>Zhichun Road area, Haidian District, Beijing</strong>. Clients are welcome by appointment, and we also accommodate video conferences, phone conferences, or on-site meetings as the matter requires. For the precise office address, visit instructions, and contact details, please refer to the <a href=&quot;contact.html&quot;>Contact</a> page or your appointment confirmation.</p>">
+          <p>康瑞位于<strong>北京市海淀区知春路区域</strong>。客户可提前预约到所洽谈，也可根据事项需要安排视频会议、电话会议或上门沟通。具体办公地址、到访指引及联系方式，建议以网站 <a href="contact.html">联系我们</a> 页面或预约确认信息为准。</p>
         </div>
       </details>
     </div>
@@ -491,11 +536,13 @@
       <a href="contact.html" data-en="Careers">加入我们</a>
     </div>
     <div class="footer__col">
-      <h4 data-en="Practice">服务</h4>
-      <a href="#services" data-en="Rights & Protection">确权与保护</a>
-      <a href="#services" data-en="Commercialization">商业运营</a>
-      <a href="#services" data-en="Enforcement & Disputes">侵权应对与争议解决</a>
-      <a href="#services" data-en="General Counsel">法律顾问</a>
+      <h4 data-en="Practice">业务领域</h4>
+      <a href="services.html#area-01" data-en="Rights Establishment">确权争议</a>
+      <a href="services.html#area-02" data-en="Litigation & Enforcement">诉讼维权</a>
+      <a href="services.html#area-03" data-en="Investigation & Evidence">调查取证</a>
+      <a href="services.html#area-04" data-en="Risk Defense">风控布局</a>
+      <a href="services.html#area-05" data-en="Licensing & Transactions">许可交易</a>
+      <a href="services.html#area-06" data-en="Strategic Counsel">战略咨询</a>
     </div>
     <div class="footer__col">
       <h4 data-en="Resources">资源</h4>
