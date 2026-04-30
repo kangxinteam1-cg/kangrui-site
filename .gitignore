@@ -9,4 +9,14 @@ site/
 其他网站参考图/
 国际高端律所官网对标研究.docx
 康瑞VI - Logo/
+康瑞Team/
+康瑞业务范围/
 网站图片/
+康瑞地址地图.png
+康瑞律师事务所首页Q&A问答.docx
+
+# 本地备份目录
+docs/assets/images/_backup-*/
+
+# 视频暂不进仓库（网络问题，待后续单独处理）
+docs/assets/videos/
