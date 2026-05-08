@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="域名仲裁 — 经纬地球仪">
+  <defs>
+    <radialGradient id="bg8" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#0e2858"/>
+      <stop offset="60%" stop-color="#05152e"/>
+      <stop offset="100%" stop-color="#02091a"/>
+    </radialGradient>
+    <radialGradient id="globe" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#15356a"/>
+      <stop offset="55%" stop-color="#0a1f3d"/>
+      <stop offset="100%" stop-color="#040d20"/>
+    </radialGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a7240"/>
+      <stop offset="50%" stop-color="#e6caa1"/>
+      <stop offset="100%" stop-color="#8a7240"/>
+    </linearGradient>
+    <linearGradient id="meridian" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6caa1"/>
+      <stop offset="50%" stop-color="#b89968"/>
+      <stop offset="100%" stop-color="#5a4520"/>
+    </linearGradient>
+    <radialGradient id="spot8" cx="35%" cy="32%" r="40%">
+      <stop offset="0%" stop-color="#d6b988" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="n8" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.020"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg8)"/>
+  <rect width="1600" height="900" fill="url(#spot8)"/>
+
+  <!-- meridian arc (brass ring around globe) -->
+  <g transform="translate(800, 460)">
+    <ellipse cx="0" cy="0" rx="320" ry="320" fill="none" stroke="url(#meridian)" stroke-width="6"/>
+    <ellipse cx="0" cy="0" rx="320" ry="320" fill="none" stroke="#3a2c10" stroke-width="2" opacity="0.8" stroke-dasharray="2 6"/>
+    <!-- top pivot -->
+    <circle cx="0" cy="-320" r="10" fill="url(#meridian)"/>
+    <circle cx="0" cy="320" r="10" fill="url(#meridian)"/>
+    <!-- base -->
+    <rect x="-90" y="320" width="180" height="14" rx="3" fill="url(#meridian)"/>
+    <rect x="-110" y="334" width="220" height="10" rx="2" fill="url(#meridian)" opacity="0.8"/>
+  </g>
+
+  <!-- globe -->
+  <g transform="translate(800, 460)">
+    <circle r="280" fill="url(#globe)"/>
+    <!-- latitudes -->
+    <g stroke="url(#goldG)" stroke-width="0.8" fill="none" opacity="0.55">
+      <ellipse rx="280" ry="28"/>
+      <ellipse rx="270" ry="80"/>
+      <ellipse rx="250" ry="135"/>
+      <ellipse rx="220" ry="190"/>
+      <ellipse rx="180" ry="240"/>
+      <ellipse rx="120" ry="270"/>
+    </g>
+    <!-- longitudes -->
+    <g stroke="url(#goldG)" stroke-width="0.8" fill="none" opacity="0.55">
+      <ellipse rx="28" ry="280"/>
+      <ellipse rx="80" ry="270"/>
+      <ellipse rx="135" ry="250"/>
+      <ellipse rx="190" ry="220"/>
+      <ellipse rx="240" ry="180"/>
+      <ellipse rx="270" ry="120"/>
+    </g>
+    <!-- equator highlight -->
+    <ellipse rx="280" ry="6" fill="url(#goldG)" opacity="0.35"/>
+    <!-- abstract continent shapes -->
+    <g fill="url(#goldG)" opacity="0.20">
+      <path d="M -200,-60 Q -160,-100 -100,-90 Q -50,-60 -80,-20 Q -130,10 -180,0 Q -220,-20 -200,-60 Z"/>
+      <path d="M 40,-120 Q 80,-140 130,-110 Q 150,-70 110,-50 Q 70,-50 50,-80 Q 30,-100 40,-120 Z"/>
+      <path d="M -80,80 Q -40,60 30,90 Q 80,130 60,180 Q -10,200 -50,170 Q -100,130 -80,80 Z"/>
+      <path d="M 130,40 Q 180,30 220,80 Q 230,140 180,160 Q 130,150 120,100 Q 110,60 130,40 Z"/>
+    </g>
+    <!-- specular highlight -->
+    <ellipse cx="-90" cy="-90" rx="80" ry="60" fill="#fff" opacity="0.10"/>
+  </g>
+
+  <!-- domain string graffiti (subtle) -->
+  <g font-family="JetBrains Mono, monospace" font-size="14" fill="url(#goldG)" opacity="0.30" letter-spacing="0.05em">
+    <text x="180" y="180">https://</text>
+    <text x="220" y="780">.com</text>
+    <text x="1300" y="220">.cn</text>
+    <text x="1280" y="780">.net</text>
+    <text x="100" y="500">@</text>
+    <text x="1480" y="500">/</text>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#n8)"/>
+  <radialGradient id="vg8" cx="50%" cy="50%" r="65%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vg8)"/>
+</svg>

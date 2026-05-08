@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img">
+<defs>
+<radialGradient id="bg2" cx="50%" cy="38%" r="80%">
+<stop offset="0%" stop-color="#102a5a"/><stop offset="55%" stop-color="#05152e"/><stop offset="100%" stop-color="#02091a"/>
+</radialGradient>
+<linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#8a7240"/><stop offset="50%" stop-color="#e6caa1"/><stop offset="100%" stop-color="#8a7240"/>
+</linearGradient>
+<linearGradient id="archL" x1="50%" y1="0%" x2="50%" y2="100%">
+<stop offset="0%" stop-color="#f4e1bc" stop-opacity="0.85"/><stop offset="40%" stop-color="#d6b988" stop-opacity="0.55"/><stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="step" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1f3a72"/><stop offset="100%" stop-color="#0a1f3d"/></linearGradient>
+<linearGradient id="stepL" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3a5a96"/><stop offset="100%" stop-color="#142852"/></linearGradient>
+<radialGradient id="halo" cx="50%" cy="32%" r="22%"><stop offset="0%" stop-color="#fff" stop-opacity="0.35"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<pattern id="n2" width="3" height="3" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.018"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg2)"/>
+<g stroke="#1a3565" stroke-width="0.6" opacity="0.45">
+<line x1="120" y1="80" x2="120" y2="600"/><line x1="280" y1="80" x2="280" y2="600"/><line x1="440" y1="80" x2="440" y2="600"/>
+<line x1="1160" y1="80" x2="1160" y2="600"/><line x1="1320" y1="80" x2="1320" y2="600"/><line x1="1480" y1="80" x2="1480" y2="600"/>
+</g>
+<g transform="translate(800, 380)">
+<path d="M -240,200 L -240,-60 A 240,240 0 0 1 240,-60 L 240,200 Z" fill="#0a1f3d" stroke="url(#g2)" stroke-width="2"/>
+<path d="M -180,200 L -180,-30 A 180,180 0 0 1 180,-30 L 180,200 Z" fill="#020a1c"/>
+<path d="M -180,200 L -180,-30 A 180,180 0 0 1 180,-30 L 180,200 Z" fill="url(#archL)"/>
+<ellipse cx="0" cy="-30" rx="100" ry="80" fill="url(#halo)"/>
+<rect x="-22" y="-310" width="44" height="56" fill="url(#g2)" opacity="0.85"/>
+<rect x="-30" y="-310" width="60" height="14" fill="url(#g2)"/>
+<line x1="-260" y1="200" x2="260" y2="200" stroke="url(#g2)" stroke-width="2"/>
+</g>
+<polygon points="640,580 960,580 1000,612 600,612" fill="url(#step)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="600,612 1000,612 1050,652 550,652" fill="url(#stepL)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="550,652 1050,652 1110,696 490,696" fill="url(#step)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="490,696 1110,696 1180,744 420,744" fill="url(#stepL)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="420,744 1180,744 1260,800 340,800" fill="url(#step)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="340,800 1260,800 1360,860 240,860" fill="url(#stepL)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="240,860 1360,860 1480,920 120,920" fill="url(#step)" stroke="url(#g2)" stroke-width="0.4"/>
+<polygon points="730,580 870,580 980,920 620,920" fill="url(#archL)" opacity="0.5"/>
+<g font-family="Times,serif" font-size="14" letter-spacing="0.4em" fill="url(#g2)" opacity="0.45" text-anchor="middle">
+<text x="800" y="80">SUPREMA · LEX · IUSTITIA</text>
+</g>
+<rect width="1600" height="900" fill="url(#n2)"/>
+<radialGradient id="vg2" cx="50%" cy="50%" r="65%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+<rect width="1600" height="900" fill="url(#vg2)"/>
+</svg>

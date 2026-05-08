@@ -109,6 +109,15 @@ document.querySelectorAll('.post').forEach((el, i) => {
 });
 
 // Count-up stats
+// Auto-fill any [data-since-year] elements with (currentYear - sinceYear)
+// This must run BEFORE animateCount so the computed value is what gets animated.
+document.querySelectorAll('[data-since-year]').forEach(el => {
+  const since = parseInt(el.dataset.sinceYear, 10);
+  if (!isNaN(since)) {
+    el.textContent = String(new Date().getFullYear() - since);
+  }
+});
+
 const statNums = document.querySelectorAll('.stat__num');
 const animateCount = (el) => {
   const text = el.textContent.trim();
@@ -145,21 +154,24 @@ statNums.forEach(el => statIO.observe(el));
 (function () {
   const grid = document.getElementById('news-grid')
             || document.getElementById('insight-grid')
-            || document.getElementById('team-list');
+            || document.getElementById('team-list')
+            || document.getElementById('case-grid');
   if (!grid) return;
 
-  const cards = Array.from(grid.querySelectorAll('.news-card, .insight-card, .lawyer-card'));
+  const cards = Array.from(grid.querySelectorAll('.news-card, .insight-card, .lawyer-card, .case-card'));
   const yearSelect = document.getElementById('year-select');
   const searchInput = document.getElementById('news-search')
                    || document.getElementById('insight-search')
-                   || document.getElementById('team-search');
+                   || document.getElementById('team-search')
+                   || document.getElementById('case-search');
   const emptyEl = document.getElementById('news-empty')
               || document.getElementById('insight-empty')
-              || document.getElementById('team-empty');
+              || document.getElementById('team-empty')
+              || document.getElementById('case-empty');
   const countEl = document.getElementById('team-result-count');
   const sortSelect = document.getElementById('team-sort');
 
-  const state = { kind: 'all', area: 'all', year: 'all', role: 'all', q: '' };
+  const state = { kind: 'all', area: 'all', year: 'all', role: 'all', right: 'all', q: '' };
 
   // Stagger the initial reveal animation a bit on cards
   cards.forEach((el, i) => { el.style.transitionDelay = (i % 6) * 0.06 + 's'; });
@@ -212,6 +224,7 @@ statNums.forEach(el => statIO.observe(el));
     if (state.area !== 'all' && card.dataset.area && !card.dataset.area.split(/\s+/).includes(state.area)) return false;
     if (state.year !== 'all' && card.dataset.year !== state.year) return false;
     if (state.role !== 'all' && card.dataset.role !== state.role) return false;
+    if (state.right !== 'all' && card.dataset.right && !card.dataset.right.split(/\s+/).includes(state.right)) return false;
     if (state.q) {
       const text = card.textContent.toLowerCase();
       if (!text.includes(state.q)) return false;

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="跨境刑事打击 — 调查地图与红线">
+  <defs>
+    <radialGradient id="bg6" cx="40%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#0e2858"/>
+      <stop offset="60%" stop-color="#05152e"/>
+      <stop offset="100%" stop-color="#02091a"/>
+    </radialGradient>
+    <linearGradient id="goldM" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a7240"/>
+      <stop offset="50%" stop-color="#e6caa1"/>
+      <stop offset="100%" stop-color="#8a7240"/>
+    </linearGradient>
+    <linearGradient id="redLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a8493b"/>
+      <stop offset="50%" stop-color="#d97560"/>
+      <stop offset="100%" stop-color="#a8493b"/>
+    </linearGradient>
+    <radialGradient id="lamp6" cx="22%" cy="22%" r="35%">
+      <stop offset="0%" stop-color="#ffd9a3" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="n6" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.020"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg6)"/>
+  <rect width="1600" height="900" fill="url(#lamp6)"/>
+
+  <!-- map "paper" with curled corners -->
+  <g transform="translate(800, 450) rotate(-3)">
+    <rect x="-560" y="-330" width="1120" height="660" rx="6" fill="#101e3a" stroke="url(#goldM)" stroke-width="1" opacity="0.92"/>
+
+    <!-- abstract coastlines -->
+    <g stroke="url(#goldM)" stroke-width="1.5" fill="none" opacity="0.55">
+      <path d="M -460 -220 Q -380 -260 -300 -210 T -160 -180 Q -80 -140 0 -180 Q 80 -220 200 -160 T 360 -130 Q 440 -150 480 -90"/>
+      <path d="M -480 60 Q -380 30 -280 80 T -100 100 Q 0 60 120 90 Q 220 130 380 80 Q 460 50 500 100"/>
+      <path d="M -440 220 Q -300 200 -180 250 Q -40 270 100 230 Q 240 260 360 220"/>
+    </g>
+
+    <!-- thin lat/lon grid -->
+    <g stroke="#3b5d97" stroke-width="0.4" opacity="0.45">
+      <line x1="-560" y1="-150" x2="560" y2="-150"/>
+      <line x1="-560" y1="0" x2="560" y2="0"/>
+      <line x1="-560" y1="150" x2="560" y2="150"/>
+      <line x1="-280" y1="-330" x2="-280" y2="330"/>
+      <line x1="0" y1="-330" x2="0" y2="330"/>
+      <line x1="280" y1="-330" x2="280" y2="330"/>
+    </g>
+
+    <!-- pinned points connected with red thread -->
+    <g>
+      <line x1="-340" y1="-90" x2="-120" y2="80" stroke="url(#redLine)" stroke-width="2"/>
+      <line x1="-120" y1="80" x2="180" y2="-50" stroke="url(#redLine)" stroke-width="2"/>
+      <line x1="180" y1="-50" x2="380" y2="120" stroke="url(#redLine)" stroke-width="2"/>
+      <!-- pin heads -->
+      <circle cx="-340" cy="-90" r="9" fill="#a8493b"/>
+      <circle cx="-340" cy="-90" r="3" fill="#fff" opacity="0.65"/>
+      <circle cx="-120" cy="80" r="9" fill="#a8493b"/>
+      <circle cx="-120" cy="80" r="3" fill="#fff" opacity="0.65"/>
+      <circle cx="180" cy="-50" r="9" fill="#a8493b"/>
+      <circle cx="180" cy="-50" r="3" fill="#fff" opacity="0.65"/>
+      <circle cx="380" cy="120" r="9" fill="#a8493b"/>
+      <circle cx="380" cy="120" r="3" fill="#fff" opacity="0.65"/>
+    </g>
+  </g>
+
+  <!-- compass rose top-left corner -->
+  <g transform="translate(220, 220)" stroke="url(#goldM)" stroke-width="1.2" fill="none">
+    <circle r="60" opacity="0.7"/>
+    <circle r="46" opacity="0.5"/>
+    <line x1="0" y1="-58" x2="0" y2="58"/>
+    <line x1="-58" y1="0" x2="58" y2="0"/>
+    <polygon points="0,-58 8,-10 0,0 -8,-10" fill="url(#goldM)" opacity="0.85"/>
+    <polygon points="0,58 8,10 0,0 -8,10" fill="url(#goldM)" opacity="0.55"/>
+    <polygon points="-58,0 -10,8 0,0 -10,-8" fill="url(#goldM)" opacity="0.55"/>
+    <polygon points="58,0 10,8 0,0 10,-8" fill="url(#goldM)" opacity="0.55"/>
+  </g>
+
+  <!-- magnifying glass bottom-right -->
+  <g transform="translate(1280, 720) rotate(-20)" stroke="url(#goldM)" stroke-width="3" fill="none">
+    <circle cx="0" cy="0" r="58"/>
+    <circle cx="0" cy="0" r="48" stroke-width="1.5" opacity="0.6"/>
+    <line x1="42" y1="42" x2="120" y2="120"/>
+    <rect x="116" y="116" width="22" height="14" transform="rotate(45 122 116)" fill="url(#goldM)"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#n6)"/>
+  <radialGradient id="vg6" cx="50%" cy="50%" r="65%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.50"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vg6)"/>
+</svg>

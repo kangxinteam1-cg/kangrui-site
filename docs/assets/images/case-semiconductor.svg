@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img">
+<defs>
+<radialGradient id="bg5" cx="48%" cy="42%" r="65%">
+<stop offset="0%" stop-color="#13366a"/><stop offset="55%" stop-color="#05152e"/><stop offset="100%" stop-color="#02091a"/>
+</radialGradient>
+<radialGradient id="wafer" cx="42%" cy="38%" r="55%">
+<stop offset="0%" stop-color="#5878b6"/><stop offset="40%" stop-color="#284a85"/><stop offset="80%" stop-color="#10254a"/><stop offset="100%" stop-color="#0a1530"/>
+</radialGradient>
+<linearGradient id="gT" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#8a7240"/><stop offset="50%" stop-color="#e6caa1"/><stop offset="100%" stop-color="#8a7240"/>
+</linearGradient>
+<radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#ffd9a3" stop-opacity="0.85"/><stop offset="50%" stop-color="#d6b988" stop-opacity="0.30"/><stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="sp5" cx="42%" cy="32%" r="35%"><stop offset="0%" stop-color="#d6e6ff" stop-opacity="0.30"/><stop offset="100%" stop-color="#7ea2da" stop-opacity="0"/></radialGradient>
+<pattern id="n5" width="3" height="3" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.020"/></pattern>
+<pattern id="dG" width="42" height="42" patternUnits="userSpaceOnUse"><rect width="42" height="42" fill="none" stroke="url(#gT)" stroke-width="0.6" opacity="0.6"/></pattern>
+<clipPath id="wC"><circle cx="800" cy="450" r="270"/></clipPath>
+</defs>
+<rect width="1600" height="900" fill="url(#bg5)"/>
+<rect width="1600" height="900" fill="url(#sp5)"/>
+<g stroke="url(#gT)" stroke-width="1" fill="none" opacity="0.35">
+<path d="M 40 180 L 280 180 L 280 280 L 480 280"/>
+<path d="M 40 380 L 220 380 L 220 460 L 380 460"/>
+<path d="M 40 580 L 200 580 L 200 660 L 380 660"/>
+<path d="M 40 760 L 240 760 L 240 800 L 400 800"/>
+<circle cx="280" cy="180" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="480" cy="280" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="220" cy="380" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="380" cy="460" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="200" cy="580" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="380" cy="660" r="3" fill="url(#gT)" stroke="none"/>
+</g>
+<g stroke="url(#gT)" stroke-width="1" fill="none" opacity="0.35">
+<path d="M 1560 220 L 1320 220 L 1320 320 L 1140 320"/>
+<path d="M 1560 420 L 1340 420 L 1340 500 L 1180 500"/>
+<path d="M 1560 600 L 1380 600 L 1380 680 L 1200 680"/>
+<path d="M 1560 780 L 1340 780 L 1340 820 L 1200 820"/>
+<circle cx="1320" cy="220" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="1340" cy="420" r="3" fill="url(#gT)" stroke="none"/>
+<circle cx="1380" cy="600" r="3" fill="url(#gT)" stroke="none"/>
+</g>
+<circle cx="800" cy="450" r="290" fill="none" stroke="url(#gT)" stroke-width="3"/>
+<circle cx="800" cy="450" r="280" fill="url(#wafer)"/>
+<circle cx="800" cy="450" r="280" fill="none" stroke="url(#gT)" stroke-width="0.8" opacity="0.5"/>
+<line x1="690" y1="186" x2="910" y2="186" stroke="url(#gT)" stroke-width="2" opacity="0.85"/>
+<g clip-path="url(#wC)"><rect x="500" y="150" width="600" height="600" fill="url(#dG)"/></g>
+<rect x="775" y="425" width="50" height="50" fill="url(#gT)" opacity="0.30" stroke="url(#gT)" stroke-width="1.5"/>
+<rect x="785" y="435" width="30" height="30" fill="none" stroke="url(#gT)" stroke-width="0.8" opacity="0.7"/>
+<rect x="875" y="325" width="50" height="50" fill="none" stroke="url(#gT)" stroke-width="1" opacity="0.55"/>
+<rect x="625" y="525" width="50" height="50" fill="none" stroke="url(#gT)" stroke-width="1" opacity="0.55"/>
+<circle cx="800" cy="450" r="60" fill="url(#cGlow)"/>
+<circle cx="800" cy="450" r="8" fill="#fff" opacity="0.9"/>
+<circle cx="800" cy="450" r="20" fill="none" stroke="url(#gT)" stroke-width="1.2" opacity="0.7"/>
+<g transform="translate(1280,200) rotate(28)" stroke="url(#gT)" stroke-width="2.5" fill="none">
+<line x1="0" y1="0" x2="200" y2="48"/>
+<line x1="-2" y1="22" x2="198" y2="70"/>
+<circle cx="-8" cy="11" r="8" fill="url(#gT)"/>
+</g>
+<g stroke="url(#gT)" stroke-width="0.6" opacity="0.55" fill="none">
+<line x1="800" y1="170" x2="800" y2="120"/>
+<line x1="800" y1="120" x2="950" y2="120"/>
+<text x="960" y="124" font-family="JetBrains Mono,monospace" font-size="13" fill="url(#gT)" opacity="0.8">die · 0,0</text>
+</g>
+<rect width="1600" height="900" fill="url(#n5)"/>
+<radialGradient id="vg5" cx="50%" cy="50%" r="65%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.50"/></radialGradient>
+<rect width="1600" height="900" fill="url(#vg5)"/>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="豪华汽车系列案 — 悬挂减振系统">
+  <defs>
+    <radialGradient id="bg3" cx="60%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0c2655"/>
+      <stop offset="55%" stop-color="#05152e"/>
+      <stop offset="100%" stop-color="#02091a"/>
+    </radialGradient>
+    <linearGradient id="goldA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6caa1"/>
+      <stop offset="50%" stop-color="#b89968"/>
+      <stop offset="100%" stop-color="#6a5128"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a4a64"/>
+      <stop offset="50%" stop-color="#1a2a44"/>
+      <stop offset="100%" stop-color="#0d1830"/>
+    </linearGradient>
+    <pattern id="n3" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.018"/>
+    </pattern>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a3565" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg3)"/>
+  <!-- blueprint grid background -->
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- spring coils (vertical) -->
+  <g transform="translate(800, 450)" stroke="url(#goldA)" stroke-width="6" fill="none" stroke-linecap="round">
+    <ellipse cx="0" cy="-180" rx="110" ry="22"/>
+    <ellipse cx="0" cy="-130" rx="110" ry="22"/>
+    <ellipse cx="0" cy="-80"  rx="110" ry="22"/>
+    <ellipse cx="0" cy="-30"  rx="110" ry="22"/>
+    <ellipse cx="0" cy="20"   rx="110" ry="22"/>
+    <ellipse cx="0" cy="70"   rx="110" ry="22"/>
+    <ellipse cx="0" cy="120"  rx="110" ry="22"/>
+    <ellipse cx="0" cy="170"  rx="110" ry="22"/>
+  </g>
+
+  <!-- top mount plate -->
+  <g transform="translate(800, 220)">
+    <rect x="-160" y="0" width="320" height="22" rx="4" fill="url(#metal)" stroke="url(#goldA)" stroke-width="1.5"/>
+    <rect x="-180" y="-12" width="360" height="14" rx="3" fill="url(#metal)" stroke="url(#goldA)" stroke-width="1"/>
+    <circle cx="-130" cy="11" r="4" fill="url(#goldA)"/>
+    <circle cx="130" cy="11" r="4" fill="url(#goldA)"/>
+  </g>
+
+  <!-- bottom ball joint -->
+  <g transform="translate(800, 660)">
+    <rect x="-180" y="-10" width="360" height="20" rx="3" fill="url(#metal)" stroke="url(#goldA)" stroke-width="1"/>
+    <circle cx="0" cy="40" r="48" fill="url(#metal)" stroke="url(#goldA)" stroke-width="2"/>
+    <circle cx="0" cy="40" r="32" fill="#0a1f3d" stroke="url(#goldA)" stroke-width="1"/>
+    <circle cx="0" cy="40" r="14" fill="url(#goldA)"/>
+  </g>
+
+  <!-- control arms (left & right diagonals) -->
+  <g stroke="url(#goldA)" stroke-width="3" fill="none" opacity="0.85">
+    <line x1="600" y1="700" x2="752" y2="700"/>
+    <line x1="848" y1="700" x2="1000" y2="700"/>
+    <circle cx="600" cy="700" r="14" fill="url(#metal)" stroke="url(#goldA)" stroke-width="2"/>
+    <circle cx="1000" cy="700" r="14" fill="url(#metal)" stroke="url(#goldA)" stroke-width="2"/>
+  </g>
+
+  <!-- blueprint annotations -->
+  <g stroke="#3b5d97" stroke-width="0.6" opacity="0.55" fill="none">
+    <line x1="80" y1="180" x2="220" y2="180"/>
+    <line x1="80" y1="180" x2="80" y2="320"/>
+    <line x1="1380" y1="700" x2="1520" y2="700"/>
+    <line x1="1520" y1="700" x2="1520" y2="820"/>
+    <text x="100" y="170" font-family="monospace" font-size="14" fill="#3b5d97">A-A</text>
+    <text x="1480" y="690" font-family="monospace" font-size="14" fill="#3b5d97">B-B</text>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#n3)"/>
+  <radialGradient id="vg3" cx="50%" cy="50%" r="65%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vg3)"/>
+</svg>

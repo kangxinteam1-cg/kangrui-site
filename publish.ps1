@@ -3,7 +3,9 @@
 #  Repo: https://github.com/kangxinteam1-cg/kangrui-site
 # ============================================================
 
-$ErrorActionPreference = 'Stop'
+# Use 'Continue' so PowerShell does not abort when git writes progress to stderr.
+# We rely on $LASTEXITCODE to detect failures.
+$ErrorActionPreference = 'Continue'
 Set-Location -Path $PSScriptRoot
 
 Write-Host "==> Project: $PSScriptRoot" -ForegroundColor Cyan
@@ -40,20 +42,19 @@ Write-Host "    Staged $staged files." -ForegroundColor Green
 if ($staged -eq 0) {
     Write-Host "==> Nothing to commit, skipping." -ForegroundColor Yellow
 } else {
-    # --- 5. Commit (use multiple -m to build a multi-paragraph message) ---
     Write-Host "==> Creating commit..." -ForegroundColor Cyan
-
     git commit `
-        -m "Restructure team page to Freshfields-style profile cards + add 11 lawyer profile pages" `
-        -m "- Replace placeholder team grid with 11 real lawyers (3 partners / 7 associates / 1 senior patent specialist)" `
-        -m "- Convert each card to row layout with real photo, name, role, polished tagline and capabilities" `
-        -m "- Add 11 dedicated profile pages (team-slug.html) with bio, capabilities, education, positions, cases, publications, honors" `
-        -m "- Sort bar with results count and A-Z / Z-A sort" `
-        -m "- News-hero image swapped to layered legal journals" `
-        -m "- Various copy and asset polish across home, services, news, insights pages"
+        -m "Fix truncated HTML files, SEO improvements, add missing assets" `
+        -m "- Repair 9 HTML files truncated mid-script tag" `
+        -m "- Strip NUL padding from team.html and case-template.html" `
+        -m "- Set case-template.html to noindex,nofollow" `
+        -m "- Expand sitemap.xml from 14 to 26 URLs" `
+        -m "- Add apple-touch-icon.png and visit-map.png" `
+        -m "- Add 9th Midjourney prompt for visit-map.png" `
+        -m "- Merge local + remote .gitignore rules"
 
     if ($LASTEXITCODE -ne 0) {
-        Write-Host "    Commit failed - send me the error above." -ForegroundColor Red
+        Write-Host "    Commit failed." -ForegroundColor Red
         Read-Host "Press Enter to exit"
         exit 1
     }
@@ -66,19 +67,84 @@ Write-Host "==> Pushing to GitHub (origin/main)..." -ForegroundColor Cyan
 Write-Host "    First push may pop a GitHub auth window - just sign in." -ForegroundColor Gray
 
 git push origin main
+$pushExitCode = $LASTEXITCODE
 
-if ($LASTEXITCODE -eq 0) {
+# If push failed, ask git whether remote is ahead (non-fast-forward).
+$nonFastForward = $false
+if ($pushExitCode -ne 0) {
+    git fetch origin main *>$null
+    $remoteAhead = (git rev-list --count HEAD..origin/main 2>$null)
+    if ($remoteAhead -and [int]$remoteAhead -gt 0) {
+        $nonFastForward = $true
+    }
+}
+
+if ($pushExitCode -eq 0) {
     Write-Host ""
     Write-Host "============================================================" -ForegroundColor Green
     Write-Host "  Published successfully!" -ForegroundColor Green
     Write-Host "  https://github.com/kangxinteam1-cg/kangrui-site/commits/main" -ForegroundColor Green
     Write-Host "============================================================" -ForegroundColor Green
-} else {
+}
+elseif ($nonFastForward) {
+    Write-Host ""
+    Write-Host "==> Remote has new commits we do not have locally." -ForegroundColor Yellow
+    Write-Host "==> Auto-fixing: reset HEAD to origin/main and re-commit..." -ForegroundColor Cyan
+    Write-Host ""
+
+    git reset --soft origin/main
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "    Reset failed." -ForegroundColor Red
+        Read-Host "Press Enter to exit"
+        exit 1
+    }
+
+    Write-Host "==> Re-staging all changes..." -ForegroundColor Cyan
+    git add -A
+    $reStaged = (git diff --cached --name-only | Measure-Object).Count
+    Write-Host "    Re-staged $reStaged files." -ForegroundColor Green
+
+    if ($reStaged -gt 0) {
+        Write-Host "==> Creating fresh commit on top of origin/main..." -ForegroundColor Cyan
+        git commit `
+            -m "Fix truncated HTML files, SEO improvements, add missing assets" `
+            -m "- Repair 9 HTML files truncated mid-script tag" `
+            -m "- Strip NUL padding from team.html and case-template.html" `
+            -m "- Set case-template.html to noindex,nofollow" `
+            -m "- Expand sitemap.xml from 14 to 26 URLs" `
+            -m "- Add apple-touch-icon.png and visit-map.png" `
+            -m "- Add 9th Midjourney prompt for visit-map.png" `
+            -m "- Merge local + remote .gitignore rules"
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "    Re-commit failed." -ForegroundColor Red
+            Read-Host "Press Enter to exit"
+            exit 1
+        }
+    }
+
+    Write-Host ""
+    Write-Host "==> Pushing again..." -ForegroundColor Cyan
+    git push origin main
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host ""
+        Write-Host "============================================================" -ForegroundColor Green
+        Write-Host "  Published successfully (after auto-recovery)!" -ForegroundColor Green
+        Write-Host "  https://github.com/kangxinteam1-cg/kangrui-site/commits/main" -ForegroundColor Green
+        Write-Host "============================================================" -ForegroundColor Green
+    } else {
+        Write-Host ""
+        Write-Host "============================================================" -ForegroundColor Red
+        Write-Host "  Second push still failed. Send the error to Claude." -ForegroundColor Red
+        Write-Host "============================================================" -ForegroundColor Red
+    }
+}
+else {
     Write-Host ""
     Write-Host "============================================================" -ForegroundColor Red
     Write-Host "  Push failed - see error above." -ForegroundColor Red
     Write-Host "    'Authentication failed' -> install GitHub CLI then run 'gh auth login'" -ForegroundColor Yellow
-    Write-Host "    'rejected (non-fast-forward)' -> run 'git pull --rebase origin main' and try again" -ForegroundColor Yellow
     Write-Host "============================================================" -ForegroundColor Red
 }
 

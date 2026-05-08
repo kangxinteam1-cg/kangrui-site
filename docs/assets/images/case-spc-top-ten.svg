@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="最高法十大案例 — 桂冠与天平">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0e2858"/>
+      <stop offset="60%" stop-color="#05152e"/>
+      <stop offset="100%" stop-color="#02091a"/>
+    </radialGradient>
+    <linearGradient id="goldL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6caa1"/>
+      <stop offset="40%" stop-color="#c9a77a"/>
+      <stop offset="80%" stop-color="#8a7240"/>
+      <stop offset="100%" stop-color="#5a4520"/>
+    </linearGradient>
+    <radialGradient id="spot4" cx="50%" cy="40%" r="35%">
+      <stop offset="0%" stop-color="#d6b988" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="n4" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.4" fill="#fff" fill-opacity="0.020"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg4)"/>
+  <rect width="1600" height="900" fill="url(#spot4)"/>
+
+  <!-- laurel wreath -->
+  <g transform="translate(800, 460)" fill="url(#goldL)" stroke="url(#goldL)" stroke-width="0.5">
+    <!-- left half leaves -->
+    <g>
+      <ellipse cx="-280" cy="-20" rx="32" ry="14" transform="rotate(-30 -280 -20)" opacity="0.85"/>
+      <ellipse cx="-260" cy="-90" rx="32" ry="14" transform="rotate(-50 -260 -90)" opacity="0.85"/>
+      <ellipse cx="-220" cy="-160" rx="32" ry="14" transform="rotate(-65 -220 -160)" opacity="0.85"/>
+      <ellipse cx="-160" cy="-215" rx="32" ry="14" transform="rotate(-80 -160 -215)" opacity="0.85"/>
+      <ellipse cx="-90" cy="-250" rx="32" ry="14" transform="rotate(-100 -90 -250)" opacity="0.85"/>
+      <!-- second row -->
+      <ellipse cx="-300" cy="40" rx="30" ry="13" transform="rotate(-20 -300 40)" opacity="0.7"/>
+      <ellipse cx="-285" cy="100" rx="30" ry="13" transform="rotate(-10 -285 100)" opacity="0.7"/>
+      <ellipse cx="-250" cy="155" rx="30" ry="13" transform="rotate(20 -250 155)" opacity="0.7"/>
+      <ellipse cx="-180" cy="200" rx="30" ry="13" transform="rotate(40 -180 200)" opacity="0.7"/>
+    </g>
+    <!-- right half leaves (mirror) -->
+    <g transform="scale(-1,1)">
+      <ellipse cx="-280" cy="-20" rx="32" ry="14" transform="rotate(-30 -280 -20)" opacity="0.85"/>
+      <ellipse cx="-260" cy="-90" rx="32" ry="14" transform="rotate(-50 -260 -90)" opacity="0.85"/>
+      <ellipse cx="-220" cy="-160" rx="32" ry="14" transform="rotate(-65 -220 -160)" opacity="0.85"/>
+      <ellipse cx="-160" cy="-215" rx="32" ry="14" transform="rotate(-80 -160 -215)" opacity="0.85"/>
+      <ellipse cx="-90" cy="-250" rx="32" ry="14" transform="rotate(-100 -90 -250)" opacity="0.85"/>
+      <ellipse cx="-300" cy="40" rx="30" ry="13" transform="rotate(-20 -300 40)" opacity="0.7"/>
+      <ellipse cx="-285" cy="100" rx="30" ry="13" transform="rotate(-10 -285 100)" opacity="0.7"/>
+      <ellipse cx="-250" cy="155" rx="30" ry="13" transform="rotate(20 -250 155)" opacity="0.7"/>
+      <ellipse cx="-180" cy="200" rx="30" ry="13" transform="rotate(40 -180 200)" opacity="0.7"/>
+    </g>
+    <!-- ribbon at bottom -->
+    <path d="M -45,235 L 45,235 L 35,265 L -35,265 Z" fill="url(#goldL)" opacity="0.85"/>
+  </g>
+
+  <!-- balance scale at center -->
+  <g transform="translate(800, 460)">
+    <!-- vertical stand -->
+    <rect x="-2" y="-200" width="4" height="380" fill="url(#goldL)"/>
+    <!-- top finial -->
+    <circle cx="0" cy="-205" r="8" fill="url(#goldL)"/>
+    <!-- horizontal beam -->
+    <line x1="-160" y1="-180" x2="160" y2="-180" stroke="url(#goldL)" stroke-width="3"/>
+    <!-- balance arrows -->
+    <line x1="-160" y1="-180" x2="-160" y2="-130" stroke="url(#goldL)" stroke-width="1.5"/>
+    <line x1="160" y1="-180" x2="160" y2="-130" stroke="url(#goldL)" stroke-width="1.5"/>
+    <!-- left pan -->
+    <ellipse cx="-160" cy="-115" rx="55" ry="14" fill="url(#goldL)" opacity="0.6"/>
+    <ellipse cx="-160" cy="-118" rx="55" ry="14" fill="none" stroke="url(#goldL)" stroke-width="1.2"/>
+    <!-- right pan -->
+    <ellipse cx="160" cy="-115" rx="55" ry="14" fill="url(#goldL)" opacity="0.6"/>
+    <ellipse cx="160" cy="-118" rx="55" ry="14" fill="none" stroke="url(#goldL)" stroke-width="1.2"/>
+    <!-- base -->
+    <rect x="-50" y="170" width="100" height="14" rx="2" fill="url(#goldL)"/>
+    <rect x="-65" y="184" width="130" height="8" rx="1" fill="url(#goldL)" opacity="0.7"/>
+  </g>
+
+  <!-- small "X" laurel mark over wreath top -->
+  <g transform="translate(800, 200)" stroke="url(#goldL)" stroke-width="1.2" fill="none" opacity="0.7">
+    <line x1="-12" y1="-12" x2="12" y2="12"/>
+    <line x1="-12" y1="12" x2="12" y2="-12"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#n4)"/>
+  <radialGradient id="vg4" cx="50%" cy="50%" r="65%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vg4)"/>
+</svg>

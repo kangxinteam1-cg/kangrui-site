@@ -31,4 +31,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- TEAM -->
+  <url>
+    <loc>https://www.kangruilaw.com/team.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://www.kangruilaw.com/team-ren-xiaodong.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-wu-guiming.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-wu-qiong.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-guo-chao.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-rong-yifei.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-sun-xiaobin.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-tong-yanyan.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-wang-chun.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-wu-mengqiu.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-xue-yupu.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kangruilaw.com/team-yan-shengqi.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- /TEAM -->
+
+  <!-- CASES-BUILD -->
+  <url><loc>https://www.kangruilaw.com/cases.html</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-appliance-pre-ipo-shield.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-auto-jv-ten-year-saga.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-luxury-auto-suspension-saga.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-appliance-spc-top-ten.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-us-led-semiconductor-defense.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-european-stroller-criminal-bust.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-luxury-crystal-famous-mark.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kangruilaw.com/case-global-engine-maker-domain-arbitration.html</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- /CASES-BUILD -->
 </urlset>
