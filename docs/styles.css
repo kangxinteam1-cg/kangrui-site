@@ -4785,3 +4785,45 @@ a { color: inherit; text-decoration: none; }
   .cases-stat--year { border-left: none; padding-left: 0 !important; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.10); }
   .cases-stat__qual { font-size: 14.5px; }
 }
+
+/* ==============================================================
+   NAV - keep one line on all desktop widths (2026-05-08 hotfix)
+   ============================================================== */
+.nav__inner {
+  flex-wrap: nowrap !important;
+  gap: 18px;
+  min-width: 0;
+}
+.nav__brand { flex-shrink: 0; }
+.nav__links {
+  flex-wrap: nowrap !important;
+  gap: 22px;
+  min-width: 0;
+}
+.nav__links a { white-space: nowrap; }
+.nav__home {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav__lang {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 中等屏幕 (1281px 及以下,但 >1080px) — 适度压缩 */
+@media (max-width: 1280px) {
+  .nav__inner { gap: 14px; }
+  .nav__brand { width: 170px; height: 50px; }
+  .nav__links { gap: 18px; font-size: 14px; }
+  .nav__home { font-size: 12px; padding: 6px 0; margin-right: 0; }
+  .nav__cta { padding: 8px 16px; }
+}
+
+/* 较窄屏幕 (1080px 及以下,但 >720px) — 再压缩一档 */
+@media (max-width: 1080px) {
+  .nav__links { gap: 14px; font-size: 13.5px; }
+  .nav__home { font-size: 11.5px; }
+  .nav__cta { padding: 7px 13px; font-size: 13px; }
+  .nav__lang { padding: 5px 10px; font-size: 12px; }
+  .nav__brand { width: 150px; height: 44px; }
+}
