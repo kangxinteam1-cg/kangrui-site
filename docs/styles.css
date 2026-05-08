@@ -4827,3 +4827,29 @@ a { color: inherit; text-decoration: none; }
   .nav__lang { padding: 5px 10px; font-size: 12px; }
   .nav__brand { width: 150px; height: 44px; }
 }
+
+/* ==============================================================
+   NAV - tighten default (non-scrolled) state so it never wraps
+   even when cursor is at the very top of the page (2026-05-08 #2)
+   ============================================================== */
+/* 让默认状态的 logo 直接用紧凑尺寸,与滚动后保持一致,不再切换 */
+.nav__brand {
+  width: 170px;
+  height: 50px;
+}
+.nav.scrolled .nav__brand {
+  width: 160px;
+  height: 46px;
+}
+
+/* nav 内边距固定,不随屏宽放大,腾出更多空间给链接 */
+.nav__inner {
+  max-width: 1340px;
+  padding: 0 24px;
+}
+
+/* nav-solid 模式 (案例详情/律师详情) 的 logo 也跟着紧凑 */
+.nav--solid .nav__brand {
+  width: 170px;
+  height: 50px;
+}
