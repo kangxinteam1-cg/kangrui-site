@@ -4853,3 +4853,154 @@ a { color: inherit; text-decoration: none; }
   width: 170px;
   height: 50px;
 }
+
+/* ==============================================================
+   LOGO - swap to transparent PNG, drop white box on nav
+   (2026-05-08 #3)
+   ============================================================== */
+/* nav 的 logo 换成透明 PNG,去掉白底矩形和阴影 */
+.nav__brand {
+  width: 180px;
+  height: 60px;
+  background:
+    transparent
+    url('assets/images/logo-transparent.png')
+    center / contain
+    no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+}
+.nav.scrolled .nav__brand {
+  width: 160px;
+  height: 50px;
+  background:
+    transparent
+    url('assets/images/logo-transparent.png')
+    center / contain
+    no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+}
+.nav--solid .nav__brand {
+  width: 180px;
+  height: 60px;
+  background:
+    transparent
+    url('assets/images/logo-transparent.png')
+    center / contain
+    no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+}
+.nav--solid .nav__brand img,
+.nav__brand img {
+  /* 保留隐藏 img 用作 alt 可访问性 */
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* ==============================================================
+   LOGO + NAV - enlarge logo and left-align with hero content
+   (2026-05-08 #4)
+   ============================================================== */
+/* 让 nav 容器跟 .container / .hero__content 共用同一套 max-width + padding,
+   这样左上角 logo 的左边缘与下方大标题左边缘完全对齐 */
+.nav__inner {
+  max-width: var(--max);
+  padding: 0 var(--pad);
+}
+
+/* logo 整体放大 */
+.nav__brand {
+  width: 215px;
+  height: 80px;
+}
+.nav.scrolled .nav__brand {
+  width: 175px;
+  height: 65px;
+}
+.nav--solid .nav__brand {
+  width: 215px;
+  height: 80px;
+}
+
+/* nav 整体上下 padding 略减,避免 logo 变大后 nav 太高 */
+.nav { padding: 14px 0; }
+.nav.scrolled { padding: 10px 0; }
+
+/* 链接 gap 微调,腾出空间给放大的 logo */
+.nav__links { gap: 24px; }
+@media (max-width: 1400px) {
+  .nav__links { gap: 18px; font-size: 14px; }
+  .nav__brand { width: 195px; height: 72px; }
+  .nav.scrolled .nav__brand { width: 165px; height: 60px; }
+}
+@media (max-width: 1180px) {
+  .nav__links { gap: 14px; font-size: 13.5px; }
+  .nav__brand { width: 175px; height: 64px; }
+  .nav__home { font-size: 11.5px; }
+}
+
+/* ==============================================================
+   LOGO - tight crop + left-align so it lines up with hero text
+   (2026-05-08 #5)
+   ============================================================== */
+/* logo PNG 现在已裁掉透明 padding,内容比例 ≈ 4.35:1
+   按这个比例给容器尺寸,并让 background 贴容器左边 */
+.nav__brand {
+  width: 196px;
+  height: 45px;
+  background-position: left center;
+}
+.nav.scrolled .nav__brand {
+  width: 165px;
+  height: 38px;
+  background-position: left center;
+}
+.nav--solid .nav__brand {
+  width: 196px;
+  height: 45px;
+  background-position: left center;
+}
+@media (max-width: 1400px) {
+  .nav__brand { width: 175px; height: 40px; }
+  .nav.scrolled .nav__brand { width: 150px; height: 34px; }
+}
+@media (max-width: 1180px) {
+  .nav__brand { width: 155px; height: 36px; }
+}
+
+/* ==============================================================
+   LOGO - shrink a notch, keep left alignment (2026-05-08 #6)
+   ============================================================== */
+.nav__brand {
+  width: 150px;
+  height: 34px;
+}
+.nav.scrolled .nav__brand {
+  width: 128px;
+  height: 30px;
+}
+.nav--solid .nav__brand {
+  width: 150px;
+  height: 34px;
+}
+@media (max-width: 1400px) {
+  .nav__brand { width: 140px; height: 32px; }
+  .nav.scrolled .nav__brand { width: 120px; height: 28px; }
+}
+@media (max-width: 1180px) {
+  .nav__brand { width: 125px; height: 29px; }
+}
+
+/* ==============================================================
+   FOOTER LOGO - shrink the white-box brand mark (2026-05-08 #7)
+   ============================================================== */
+.footer__brand-mark {
+  width: 175px;
+  height: 52px;
+  background-size: 130% auto;
+}
