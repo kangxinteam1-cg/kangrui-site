@@ -5028,6 +5028,16 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1180px) {
   .footer__brand-mark { width: 134px; height: 31px; }
 }
+/* 隐藏 .footer__brand-mark 内嵌的 <img> —— 它直接渲染 logo.jpg 会盖住上面的透明 PNG 背景,
+   导致页脚 logo 还显示白底框。参考 nav 的处理:保留 img 元素以维护 alt 可访问性,但视觉上隐藏。 */
+.footer__brand-mark img {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
 
 /* Force GitHub Pages rebuild - 20260511091008 */
 /* Force GitHub Pages rebuild - 20260511-footer-logo-smaller */
+/* Force GitHub Pages rebuild - 20260512-hide-inner-img */
