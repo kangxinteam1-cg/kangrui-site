@@ -5005,4 +5005,29 @@ a { color: inherit; text-decoration: none; }
   background-size: 130% auto;
 }
 
+/* ==============================================================
+   FOOTER LOGO - swap to transparent PNG to match the nav logo
+   (2026-05-11) — same source image, transparent bg, no white box,
+   no border-radius, no shadow, background-position: left center
+   ============================================================== */
+.footer__brand-mark {
+  width: 168px;
+  height: 39px;
+  background:
+    transparent
+    url('assets/images/logo-transparent.png')
+    left center / contain
+    no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 18px;
+}
+@media (max-width: 1400px) {
+  .footer__brand-mark { width: 150px; height: 34px; }
+}
+@media (max-width: 1180px) {
+  .footer__brand-mark { width: 134px; height: 31px; }
+}
+
 /* Force GitHub Pages rebuild - 20260511091008 */
+/* Force GitHub Pages rebuild - 20260511-footer-logo-smaller */

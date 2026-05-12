@@ -44,14 +44,11 @@ if ($staged -eq 0) {
 } else {
     Write-Host "==> Creating commit..." -ForegroundColor Cyan
     git commit `
-        -m "Fix truncated HTML files, SEO improvements, add missing assets" `
-        -m "- Repair 9 HTML files truncated mid-script tag" `
-        -m "- Strip NUL padding from team.html and case-template.html" `
-        -m "- Set case-template.html to noindex,nofollow" `
-        -m "- Expand sitemap.xml from 14 to 26 URLs" `
-        -m "- Add apple-touch-icon.png and visit-map.png" `
-        -m "- Add 9th Midjourney prompt for visit-map.png" `
-        -m "- Merge local + remote .gitignore rules"
+        -m "docs: footer logo swap to transparent PNG + responsive sizing" `
+        -m "- Replace footer brand-mark background with transparent PNG (matches nav logo, no white box)" `
+        -m "- Add @media breakpoints at 1400px / 1180px for smaller footer logo on narrow screens" `
+        -m "- Trigger GitHub Pages rebuild (20260511-footer-logo-smaller)" `
+        -m "- .gitignore: ignore nested 康瑞网站重建项目/ duplicate folder and __MACOSX/"
 
     if ($LASTEXITCODE -ne 0) {
         Write-Host "    Commit failed." -ForegroundColor Red
@@ -107,14 +104,11 @@ elseif ($nonFastForward) {
     if ($reStaged -gt 0) {
         Write-Host "==> Creating fresh commit on top of origin/main..." -ForegroundColor Cyan
         git commit `
-            -m "Fix truncated HTML files, SEO improvements, add missing assets" `
-            -m "- Repair 9 HTML files truncated mid-script tag" `
-            -m "- Strip NUL padding from team.html and case-template.html" `
-            -m "- Set case-template.html to noindex,nofollow" `
-            -m "- Expand sitemap.xml from 14 to 26 URLs" `
-            -m "- Add apple-touch-icon.png and visit-map.png" `
-            -m "- Add 9th Midjourney prompt for visit-map.png" `
-            -m "- Merge local + remote .gitignore rules"
+            -m "docs: footer logo swap to transparent PNG + responsive sizing" `
+            -m "- Replace footer brand-mark background with transparent PNG (matches nav logo, no white box)" `
+            -m "- Add @media breakpoints at 1400px / 1180px for smaller footer logo on narrow screens" `
+            -m "- Trigger GitHub Pages rebuild (20260511-footer-logo-smaller)" `
+            -m "- .gitignore: ignore nested 康瑞网站重建项目/ duplicate folder and __MACOSX/"
 
         if ($LASTEXITCODE -ne 0) {
             Write-Host "    Re-commit failed." -ForegroundColor Red

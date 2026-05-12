@@ -17,6 +17,10 @@ site/
 康瑞律师事务所首页Q&A问答.docx
 案例汇编V2版定稿*.docx
 案例区MJ图集Prompt.md
+__MACOSX/
+
+# 嵌套的项目副本（解压时不小心带进来的重复目录，不进仓库）
+康瑞网站重建项目/
 
 # 本地备份目录
 docs/assets/images/_backup-*/
